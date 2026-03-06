@@ -10,6 +10,7 @@ import { map, Subscription } from 'rxjs';
 })
 export class AppComponent implements OnInit, OnDestroy{
   characters: Characters[] = [];
+  showCharacters = true;
   private subscription: Subscription;
 
     constructor(private charactersService: CharactersService) {}
@@ -49,4 +50,8 @@ export class AppComponent implements OnInit, OnDestroy{
     ngOnDestroy(): void {
       this.subscription.unsubscribe();
     }
-}
+
+    hideCharacters() {
+      this.showCharacters = !this.showCharacters;
+    }
+  }

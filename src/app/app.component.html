@@ -1,5 +1,11 @@
 <h1 class="tittle">Personajes de Rick y Morty</h1>
-<app-character-list [characterList]="characters"></app-character-list>
+<app-character-list *ngIf="showCharacters" [characterList]="characters"></app-character-list>
+<div class="button-container">
+  <button class="toggle-btn" (click)="hideCharacters()" >
+    {{showCharacters ? 'Esconder' : 'Mostrar'}} personajes
+  </button>
+</div>
+
 <footer class="footer">
   <p>© 2026 Rick and Morty API</p>
   <p>Desarrollado por Miguel Ángel Díaz</p>
