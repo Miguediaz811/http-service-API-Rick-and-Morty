@@ -1,0 +1,11 @@
+<article class="comment-card">
+  <header>
+    <img [src]="character.image" alt="img personaje">
+    <h3>Personaje #{{ character.id }}</h3>
+  </header>
+  <p class="comment-body">Nombre: {{ character.name }}</p>
+  <p class="comment-body">Estado: {{ character.status }}</p>
+  <p class="comment-body">Especie: {{ character.species }}</p>
+  <p class="comment-body">Género: {{ character.gender }}</p>
+  <p class="comment-body">Origen: {{ character.origin.name }}</p>
+</article>
